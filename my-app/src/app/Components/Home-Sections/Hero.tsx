@@ -136,7 +136,7 @@ export default function Hero() {
                             transition={{
                                 duration: 0.8,
                                 ease: 'easeOut',
-                                delay: 2.8,
+                                delay: 2.9,
                             }}>
                             <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="44" height="44" rx="22" fill="#F8DC27" />
@@ -169,7 +169,7 @@ export default function Hero() {
                                     animate={{ x: '-100%' }}
                                     transition={{
                                         duration: bar.duration,
-                                        ease: [0.65, 0, 0.65, 0.90], // curva suave e elegante
+                                        ease: [0.65, 0, 0.65, 0.90],
                                         delay: 2.6
                                     }}
                                 />
