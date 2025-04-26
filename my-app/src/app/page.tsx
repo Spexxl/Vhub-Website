@@ -6,6 +6,7 @@ import Lenis from 'lenis';
 import Header from "./Components/Header";
 import Hero from "./Components/Home-Sections/Hero";
 import AfterHero from "./Components/Home-Sections/AfterHero";
+import Features from "./Components/Home-Sections/Features";
 
 export default function Home() {
 
@@ -26,9 +27,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="">
-      <TopSection scrollYProgress={scrollYProgress} />
-      <AfterHeroAnimate scrollYProgress={scrollYProgress} />
+    <div className="relative">
+      <TopSection scrollYProgress={scrollYProgress}/>
+      <AfterHeroAnimate scrollYProgress={scrollYProgress}/>
+      <Features/>
     </div>
   );
 }
@@ -45,10 +47,9 @@ const TopSection = ({scrollYProgress}: {scrollYProgress: MotionValue<number>}) =
   )
 }
 
-
 const AfterHeroAnimate = ({scrollYProgress}: {scrollYProgress: MotionValue<number>}) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0.3], [5, 0])
   return (
     <motion.div style={{scale, rotate}} className="relative">
       <AfterHero/>

@@ -7,7 +7,7 @@ import WomenImage2 from "@/app/assets/WomenImage2.png";
 export default function AfterHero() {
 
     return (
-        <div className="bg-[#0D0D0D] px-10 py-28 flex flex-col items-center justify-center gap-28">
+        <div className="bg-[#0D0D0D] px-10 py-36 flex flex-col items-center justify-center gap-28">
             <div className="flex flex-col items-center justify-center gap-0">
                 <div className="font-medium text-2xl text-white flex justify-center items-center">
                     <span className="text-6xl text-[#F8DC27]">
