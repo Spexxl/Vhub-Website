@@ -148,7 +148,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="w-full h-full bg-gray-700">
+            <div className="w-full h-full bg-gray-700 max-w-[850px]">
                 <div className="w-full h-full relative overflow-hidden">
                     <div className="absolute inset-0 flex flex-col">
                         {bars.map((bar, index) => (

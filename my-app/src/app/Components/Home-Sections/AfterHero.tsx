@@ -17,7 +17,7 @@ export default function AfterHero() {
                         transition={{
                             duration: 0.5,
                             ease: [1, 0.20, 0.35, 0.8],
-                            delay: 0.3,
+                            delay: 0.1,
                         }}
                         className="text-base text-foreground opacity-80">
                         <div className="font-medium text-2xl text-white flex justify-center items-center">
@@ -38,7 +38,7 @@ export default function AfterHero() {
                             transition={{
                                 duration: 0.5,
                                 ease: [1, 0.20, 0.35, 0.8],
-                                delay: 0.3,
+                                delay: 0.2,
                             }}
                             className="opacity-80 font-semibold text-white text-9xl">
                             <h2>Treinar Nunca</h2>
@@ -62,9 +62,48 @@ export default function AfterHero() {
 
                 </div>
                 <div className="font-medium italic text-white text-2xl flex flex-col justify-center items-center mt-6">
-                    <p>Resultados reais com planos personalizados.</p>
-                    <p> Acompanhe sua evolução com dados, </p>
-                    <p>metas e motivação.</p>
+                    <div className="overflow-hidden relative  flex items-start min-h-10">
+                        <motion.p
+                            initial={{ y: "100%" }}
+                            whileInView={{ y: "0%" }}
+                            viewport={{ once: true, amount: 0.5, root: null }}
+                            transition={{
+                                duration: 0.5,
+                                ease: [1, 0.20, 0.35, 0.8],
+                                delay: 0.3,
+                            }}
+                            className="font-medium italic text-white text-2xl">
+                            Resultados reais com planos personalizados.
+                        </motion.p>
+                    </div>
+                    <div className="overflow-hidden relative  flex items-start min-h-11">
+                        <motion.p
+                            initial={{ y: "100%" }}
+                            whileInView={{ y: "0%" }}
+                            viewport={{ once: true, amount: 0.5, root: null }}
+                            transition={{
+                                duration: 0.5,
+                                ease: [1, 0.20, 0.35, 0.8],
+                                delay: 0.4,
+                            }}
+                            className="font-medium italic text-white text-2xl">
+                            Acompanhe sua evolução com dados, 
+                        </motion.p>
+                    </div>
+                    <div className="overflow-hidden relative  flex items-start min-h-12">
+                        <motion.p
+                            initial={{ y: "100%" }}
+                            whileInView={{ y: "0%" }}
+                            viewport={{ once: true, amount: 0.5, root: null }}
+                            transition={{
+                                duration: 0.5,
+                                ease: [1, 0.20, 0.35, 0.8],
+                                delay: 0.5,
+                            }}
+                            className="font-medium italic text-white text-2xl">
+                            metas e motivação.
+                        </motion.p>
+                    </div>
                 </div>
             </div>
 
