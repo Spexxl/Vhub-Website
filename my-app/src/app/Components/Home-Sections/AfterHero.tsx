@@ -9,15 +9,57 @@ export default function AfterHero() {
     return (
         <div className="bg-[#0D0D0D] px-10 py-36 flex flex-col items-center justify-center gap-28">
             <div className="flex flex-col items-center justify-center gap-0">
-                <div className="font-medium text-2xl text-white flex justify-center items-center">
-                    <span className="text-6xl text-[#F8DC27]">
-                        *
-                    </span>
-                    A Energia Que Transforma Cada Treino
+                <div className="overflow-hidden relative  flex items-start min-h-20">
+                    <motion.div
+                        initial={{ y: "100%" }}
+                        whileInView={{ y: "0%" }}
+                        viewport={{ once: true, amount: 0.5, root: null }}
+                        transition={{
+                            duration: 0.5,
+                            ease: [1, 0.20, 0.35, 0.8],
+                            delay: 0.3,
+                        }}
+                        className="text-base text-foreground opacity-80">
+                        <div className="font-medium text-2xl text-white flex justify-center items-center">
+                            <span className="text-6xl text-[#F8DC27]">
+                                *
+                            </span>
+                            A Energia Que Transforma Cada Treino
+                        </div>
+                    </motion.div>
                 </div>
-                <div className="font-semibold text-white text-9xl flex flex-col justify-center items-center gap-4">
-                    <h2>Treinar Nunca</h2>
-                    <h2>Foi Tão Fácil</h2>
+
+                <div className=" flex flex-col justify-center items-center gap-0">
+                    <div className="overflow-hidden relative  flex items-center min-h-54">
+                        <motion.div
+                            initial={{ y: "100%" }}
+                            whileInView={{ y: "0%" }}
+                            viewport={{ once: true, amount: 0.5, root: null }}
+                            transition={{
+                                duration: 0.5,
+                                ease: [1, 0.20, 0.35, 0.8],
+                                delay: 0.3,
+                            }}
+                            className="opacity-80 font-semibold text-white text-9xl">
+                            <h2>Treinar Nunca</h2>
+                        </motion.div>
+                    </div>
+                    <div className="overflow-hidden relative flex items-center min-h-56 mt-[-60px]">
+                        <motion.div
+                            initial={{ y: "100%" }}
+                            whileInView={{ y: "0%" }}
+                            viewport={{ once: true, amount: 0.5, root: null }}
+                            transition={{
+                                duration: 0.5,
+                                ease: [1, 0.20, 0.35, 0.8],
+                                delay: 0.3,
+                            }}
+                            className="opacity-80 font-semibold text-white text-9xl">
+                            <h2>Foi Tão Fácil</h2>
+                        </motion.div>
+                    </div>
+
+
                 </div>
                 <div className="font-medium italic text-white text-2xl flex flex-col justify-center items-center mt-6">
                     <p>Resultados reais com planos personalizados.</p>

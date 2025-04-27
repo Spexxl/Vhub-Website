@@ -49,8 +49,8 @@ const TopSection = ({scrollYProgress}: {scrollYProgress: MotionValue<number>}) =
 }
 
 const AfterHeroAnimate = ({scrollYProgress}: {scrollYProgress: MotionValue<number>}) => {
-  const scale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 0.3], [5, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.24], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0.24], [5, 0])
   return (
     <motion.div style={{scale, rotate}} className="relative">
       <AfterHero/>
