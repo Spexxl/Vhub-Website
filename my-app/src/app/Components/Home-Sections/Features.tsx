@@ -7,6 +7,7 @@ import FeaturesBanner01 from "@/app/assets/FeaturesBanner01.png"
 import type { StaticImageData } from "next/image"
 import FeaturesBanner02 from "@/app/assets/FeaturesBanner02.png"
 import FeaturesBanner03 from "@/app/assets/FeaturesBanner03.png"
+import Footer from "../Footer"
 
 interface FeatureSectionProps {
     number: string
@@ -86,6 +87,8 @@ export default function Features() {
                 titlePart2="de Treino"
                 description="Organize sua rotina com facilidade. O app avisa o que treinar, quando descansar e registra tudo no histórico"
                 image={FeaturesBanner03}
+            />
+            <Footer
             />
         </div>
     )

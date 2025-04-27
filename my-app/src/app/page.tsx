@@ -7,6 +7,7 @@ import Header from "./Components/Header";
 import Hero from "./Components/Home-Sections/Hero";
 import AfterHero from "./Components/Home-Sections/AfterHero";
 import Features from "./Components/Home-Sections/Features";
+import Footer from "./Components/Footer";
 
 export default function Home() {
 
