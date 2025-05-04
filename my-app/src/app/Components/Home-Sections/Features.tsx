@@ -35,19 +35,20 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                 top: 0,
                 zIndex: Number(number) + 10,
             }}
-            className="bg-white flex items-center justify-start h-screen w-full"
+            className="bg-white flex items-center justify-between h-screen w-full max-[980px]:flex-col"
         >
-            <div className="h-full w-1/2 flex flex-col pl-10 py-20 items-start justify-between">
-                <div className="font-medium text-7xl text-foreground flex flex-col items-start justify-center gap-10">
+            <div className="h-full w-fit flex flex-col pl-10 py-20 items-start justify-between max-[980px]:h-1/2 max-[980px]:w-full
+            max-[980px]:py-5 max-[980px]:px-5 max-[980px]:justify-start max-[980px]:gap-5">
+                <div className="font-medium text-7xl text-foreground flex flex-col items-start justify-center gap-10 max-[980px]:gap-0">
                     <div className="overflow-hidden relative flex items-center h-24">
                         <motion.span
-                            initial={{ y: "100%" }}
-                            animate={{ y: isInView ? "0%" : "100%" }}
+                            initial={{ y: "180%" }}
+                            animate={{ y: isInView ? "0%" : "180%" }}
                             transition={{
-                                duration: 1.2,
+                                duration: 1.3,
                                 ease: [1, 0.20, 0.35, 0.8],
                             }}
-                            className="text-8xl block"
+                            className="text-8xl block max-[980px]:text-5xl"
                         >
                             {number}
                         </motion.span>
@@ -55,26 +56,26 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                     <div className="flex flex-col items-start justify-center gap-2">
                         <div className="overflow-hidden relative flex items-center h-26">
                             <motion.h3
-                                initial={{ y: "100%" }}
-                                animate={{ y: isInView ? "0%" : "100%" }}
+                                initial={{ y: "180%" }}
+                                animate={{ y: isInView ? "0%" : "180%" }}
                                 transition={{
-                                    duration: 1.2,
+                                    duration: 1.3,
                                     ease: [1, 0.20, 0.35, 1],
                                 }}
-                                className="text-8xl block"
+                                className="text-8xl block max-[1100px]:text-[8vw] max-[980px]:text-5xl"
                             >
                                 {titlePart1}
                             </motion.h3>
                         </div>
-                        <div className="overflow-hidden relative flex items-center h-26">
+                        <div className="overflow-hidden relative flex items-center h-26 max-[980px]:mt-[-40px]">
                             <motion.h3
-                                initial={{ y: "100%" }}
-                                animate={{ y: isInView ? "0%" : "100%" }}
+                                initial={{ y: "150%" }}
+                                animate={{ y: isInView ? "0%" : "180%" }}
                                 transition={{
-                                    duration: 1.2,
+                                    duration: 1.3,
                                     ease: [1, 0.20, 0.35, 1],
                                 }}
-                                className="text-8xl block"
+                                className="text-8xl block max-[1100px]:text-[8vw] max-[980px]:text-5xl"
                             >
                                 {titlePart2}
                             </motion.h3>
@@ -82,16 +83,16 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                     </div>
                 </div>
                 <div className="max-w-[320px] font-medium text-base text-foreground">
-                    <div className=" overflow-hidden relative flex items-center h-60">
+                    <div className=" overflow-hidden relative flex items-center h-60 max-[980px]:h-fit">
                         {description}
                     </div>
                 </div>
             </div>
-            <div className="h-full w-1/2">
+            <div className="h-full w-1/2 max-[980px]:w-full">
                 <Image
                     src={image}
                     alt=""
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-right max-[980px]:max-w-[500px]"
                 />
             </div>
         </motion.section>
