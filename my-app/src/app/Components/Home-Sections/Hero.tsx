@@ -11,10 +11,11 @@ export default function Hero() {
     ];
 
     return (
-        <div className="w-full h-screen bg-white flex items-end justify-center gap-10">
-            <div className="w-full h-full flex flex-col items-center justify-start gap-28 pt-54">
+        <div className="w-full h-screen bg-white flex items-end justify-center gap-10 max-[980px]:flex-col
+        max-[980px]:items-center max-[980px]:justify-between">
+            <div className="w-full h-full flex flex-col items-center justify-start gap-28 pt-54 max-[980px]:pt-30">
                 <div className="flex flex-col items-center justify-center gap-6">
-                    <div className="overflow-hidden relative  flex items-center">
+                    <div className="overflow-hidden relative flex items-center">
                         <motion.span
                             initial={{ y: "100%" }}
                             animate={{ y: "0%" }}
@@ -28,7 +29,7 @@ export default function Hero() {
                         </motion.span>
                     </div>
                     <div className="flex flex-col gap-3 items-center">
-                        <div className="overflow-hidden relative  flex items-center">
+                        <div className="overflow-hidden relative flex items-center">
                             <motion.h1
                                 initial={{ y: "100%" }}
                                 animate={{ y: "0%" }}
@@ -37,7 +38,7 @@ export default function Hero() {
                                     ease: [1, 0.20, 0.45, 0.55],
                                     delay: 1,
                                 }}
-                                className="text-7xl font-semibold text-foreground">
+                                className="text-7xl font-semibold text-foreground max-[1400px]:text-[5vw] max-[980px]:text-[10vw]">
                                 UMA NOVA ERA
                             </motion.h1>
                         </div>
@@ -52,7 +53,8 @@ export default function Hero() {
                                 xmlns="http://www.w3.org/2000/svg"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}>
+                                transition={{ duration: 1, ease: [0.65, 0, 0.35, 1] }}
+                                className="max-[1400px]:w-[24vw] max-[980px]:w-[44vw]">
                                 <motion.path
                                     d="M33.8771 71H38.6536L65.7052 12.7279L72 12.7125V0.0766739L57.6265 0.0920086L36.2506 46.127L21.1548 12.7432H26.0049L31.5037 0.904752L31.4889 0.0766739L0.132678 0L0 12.8045H7.1941L33.8771 71Z"
                                     fill="#F8DC27"
@@ -71,7 +73,7 @@ export default function Hero() {
                                     fill="#F8DC27"
                                 />
                             </motion.svg>
-                            <div className="overflow-hidden relative  flex items-center">
+                            <div className="overflow-hidden relative flex items-center">
                                 <motion.h1
                                     initial={{ y: "100%" }}
                                     animate={{ y: "0%" }}
@@ -80,7 +82,7 @@ export default function Hero() {
                                         ease: [1, 0.20, 0.45, 0.55],
                                         delay: 1.1,
                                     }}
-                                    className="text-7xl font-semibold text-foreground">
+                                    className="text-7xl font-semibold text-foreground max-[1400px]:text-[5vw] max-[980px]:text-[10vw]">
                                     CHEGOU
                                 </motion.h1>
                             </div>
@@ -114,8 +116,8 @@ export default function Hero() {
                     </div>
 
                 </div>
-                <div className="flex flex-col items-center justify-center gap-3">
-                    <div className="overflow-hidden relative  flex items-center">
+                <div className="flex flex-col items-center justify-center gap-3 max-[980px]:hidden">
+                    <div className="overflow-hidden relative flex items-center">
                         <motion.a
                             initial={{ y: "100%" }}
                             animate={{ y: "0%" }}
@@ -129,7 +131,7 @@ export default function Hero() {
                         </motion.a>
                     </div>
                     
-                    <div className="overflow-hidden relative  flex items-center">
+                    <div className="overflow-hidden relative flex items-center">
                         <motion.div
                             initial={{ y: "100%" }}
                             animate={{ y: "0%" }}
@@ -148,8 +150,10 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="w-full h-full bg-gray-700 max-w-[850px]">
+            <div className="w-full h-full bg-gray-700 max-w-[850px] max-[980px]:max-w-full">
                 <div className="w-full h-full relative overflow-hidden">
+                    <div className="absolute inset-0 w-full h-full" style={{backgroundImage: `url(${HeroBanner.src})`, backgroundSize: 'cover', backgroundPosition: 'top', opacity: 0}} />
+                    
                     <div className="absolute inset-0 flex flex-col">
                         {bars.map((bar, index) => (
                             <div key={bar.id} className="relative h-1/3 w-full overflow-hidden">
@@ -157,7 +161,7 @@ export default function Hero() {
                                     <div className="absolute inset-0" style={{
                                         backgroundImage: `url(${HeroBanner.src})`,
                                         backgroundSize: 'cover',
-                                        backgroundPosition: `center ${index * 50}%`,
+                                        backgroundPosition: 'top',
                                         top: `${-index * 100}%`,
                                         height: '300%'
                                     }} />

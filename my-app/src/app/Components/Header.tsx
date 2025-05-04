@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function Header() {
     return (
         <div className="flex justify-between items-center w-full px-10 py-5
-        absolute top-0 z-10">
+        absolute top-0 z-10 max-[980px]:px-5">
             <div className="overflow-hidden relative  flex items-center">
                 <motion.a
                     initial={{ y: "-100%" }}
