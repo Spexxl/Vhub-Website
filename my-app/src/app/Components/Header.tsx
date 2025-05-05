@@ -8,27 +8,6 @@ export default function Header() {
     const [cursorVisible, setCursorVisible] = useState(false);
     const [activeLink, setActiveLink] = useState(null);
 
-    useEffect(() => {
-        if (menuOpen) {
-            document.body.style.overflow = 'hidden';
-            document.body.style.height = '100vh';
-            document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
-        } else {
-            document.body.style.overflow = '';
-            document.body.style.height = '';
-            document.body.style.position = '';
-            document.body.style.width = '';
-        }
-
-        return () => {
-            document.body.style.overflow = '';
-            document.body.style.height = '';
-            document.body.style.position = '';
-            document.body.style.width = '';
-        };
-    }, [menuOpen]);
-
     interface MousePosition {
         x: number;
         y: number;
@@ -50,7 +29,6 @@ export default function Header() {
     const menuItems = [
         { name: "Home", href: "/" },
         { name: "Sobre", href: "/#sobre" },
-        { name: "Benefícios", href: "/#benefícios" },
         { name: "Suporte", href: "/#suporte" },
         { name: "Termos", href: "/politicas-de-privacidade" }
     ];
@@ -59,6 +37,10 @@ export default function Header() {
         { name: "--", href: "" },
         { name: "Instagram", href: "https://www.instagram.com/vibranthubapp/" },
     ];
+
+    const handleLinkClick = () => {
+        setMenuOpen(false);
+    };
 
     return (
         <>
@@ -164,6 +146,7 @@ export default function Header() {
                                                 className="text-white hover:text-gray-300 transition-colors"
                                                 onMouseEnter={() => setCursorVisible(true)}
                                                 onMouseLeave={() => setCursorVisible(false)}
+                                                onClick={handleLinkClick}
                                             >
                                                 {link.name}
                                             </a>
@@ -217,6 +200,7 @@ export default function Header() {
                                                 ${index === 3 ? 'text-white' : 'text-gray-400'}`}
                                                     onMouseEnter={() => setCursorVisible(true)}
                                                     onMouseLeave={() => setCursorVisible(false)}
+                                                    onClick={handleLinkClick}
                                                 >
                                                     {item.name}
                                                 </a>

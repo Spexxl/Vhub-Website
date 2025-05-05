@@ -152,19 +152,6 @@ export default function Footer() {
                                         duration: 1.3,
                                         ease: [1, 0.20, 0.35, 0.8],
                                     }}
-                                    href="/#benefícios"
-                                    className="font-bold text-2xl text-foreground">
-                                    BENEFÍCIOS
-                                </motion.a>
-                            </div>
-                            <div ref={ref} className="overflow-hidden relative flex items-center h-[40px]">
-                                <motion.a
-                                    initial={{ y: "180%" }}
-                                    animate={{ y: isInView ? "0%" : "180%" }}
-                                    transition={{
-                                        duration: 1.3,
-                                        ease: [1, 0.20, 0.35, 0.8],
-                                    }}
                                     href="/#suporte"
                                     className="font-bold text-2xl text-foreground">
                                     SUPORTE

@@ -39,8 +39,7 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
             className="bg-white flex items-center justify-between h-screen w-full max-[980px]:flex-col"
         >
             <div className="h-full w-fit flex flex-col pl-10 py-20 items-start justify-between max-[980px]:h-1/2 max-[980px]:w-full
-            max-[980px]:py-5 max-[980px]:px-5 max-[980px]:justify-start max-[980px]:gap-5"
-            id="#benefícios">
+            max-[980px]:py-5 max-[980px]:px-5 max-[980px]:justify-start max-[980px]:gap-5">
                 <div className="font-medium text-7xl text-foreground flex flex-col items-start justify-center gap-10 max-[980px]:gap-0">
                     <div className="overflow-hidden relative flex items-center h-24">
                         <motion.span
