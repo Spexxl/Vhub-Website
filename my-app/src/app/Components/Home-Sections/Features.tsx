@@ -25,7 +25,7 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
         offset: ["end end", "start start"],
     })
     const isInView = useInView(ref)
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.95])
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 1])
 
     return (
         <motion.section

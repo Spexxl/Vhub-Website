@@ -52,8 +52,8 @@ export default function Home() {
 
 
 const TopSection = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
+  const scale = useTransform(scrollYProgress, [0, 0], [0, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0], [0, 0])
   return (
     <motion.div style={{ scale, rotate }} className="sticky top-0 h-screen bg-white">
       <Header />
@@ -62,8 +62,8 @@ const TopSection = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> 
   )
 }
 const AfterHeroAnimate = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
-  const scale = useTransform(scrollYProgress, [0, 0.20], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 0.20], [5, 0])
+  const scale = useTransform(scrollYProgress, [0, 0], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0], [0, 0])
   return (
     <motion.div style={{ scale, rotate }} className="relative">
       <AfterHero />
