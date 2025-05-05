@@ -7,6 +7,7 @@ import FeaturesBanner01 from "@/app/assets/FeaturesBanner01.png"
 import type { StaticImageData } from "next/image"
 import FeaturesBanner02 from "@/app/assets/FeaturesBanner02.png"
 import FeaturesBanner03 from "@/app/assets/FeaturesBanner03.png"
+import SupportSection from "./Support"
 import Footer from "../Footer"
 
 interface FeatureSectionProps {
@@ -38,7 +39,8 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
             className="bg-white flex items-center justify-between h-screen w-full max-[980px]:flex-col"
         >
             <div className="h-full w-fit flex flex-col pl-10 py-20 items-start justify-between max-[980px]:h-1/2 max-[980px]:w-full
-            max-[980px]:py-5 max-[980px]:px-5 max-[980px]:justify-start max-[980px]:gap-5">
+            max-[980px]:py-5 max-[980px]:px-5 max-[980px]:justify-start max-[980px]:gap-5"
+            id="#benefícios">
                 <div className="font-medium text-7xl text-foreground flex flex-col items-start justify-center gap-10 max-[980px]:gap-0">
                     <div className="overflow-hidden relative flex items-center h-24">
                         <motion.span
@@ -123,6 +125,7 @@ export default function Features() {
                 description="Organize sua rotina com facilidade. O app avisa o que treinar, quando descansar e registra tudo no histórico"
                 image={FeaturesBanner03}
             />
+            <SupportSection />
             <Footer
             />
         </div>

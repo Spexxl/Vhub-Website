@@ -126,6 +126,7 @@ export default function Footer() {
                                         duration: 1.3,
                                         ease: [1, 0.20, 0.35, 0.8],
                                     }}
+                                    href="/"
                                     className="font-bold text-2xl text-foreground">
                                     HOME
                                 </motion.a>
@@ -138,6 +139,7 @@ export default function Footer() {
                                         duration: 1.3,
                                         ease: [1, 0.20, 0.35, 0.8],
                                     }}
+                                    href="/#sobre"
                                     className="font-bold text-2xl text-foreground">
                                     SOBRE
                                 </motion.a>
@@ -150,8 +152,22 @@ export default function Footer() {
                                         duration: 1.3,
                                         ease: [1, 0.20, 0.35, 0.8],
                                     }}
+                                    href="/#benefícios"
                                     className="font-bold text-2xl text-foreground">
                                     BENEFÍCIOS
+                                </motion.a>
+                            </div>
+                            <div ref={ref} className="overflow-hidden relative flex items-center h-[40px]">
+                                <motion.a
+                                    initial={{ y: "180%" }}
+                                    animate={{ y: isInView ? "0%" : "180%" }}
+                                    transition={{
+                                        duration: 1.3,
+                                        ease: [1, 0.20, 0.35, 0.8],
+                                    }}
+                                    href="/#suporte"
+                                    className="font-bold text-2xl text-foreground">
+                                    SUPORTE
                                 </motion.a>
                             </div>
                         </div>
@@ -178,6 +194,8 @@ export default function Footer() {
                                         duration: 1.3,
                                         ease: [1, 0.20, 0.35, 0.8],
                                     }}
+                                    href="https://www.instagram.com/vibranthubapp/"
+                                    target="_blank"
                                     className="font-bold text-2xl text-foreground">
                                     INSTAGRAM
                                 </motion.a>
@@ -198,8 +216,8 @@ export default function Footer() {
                 <div className="pt-10 pb-8 flex items-center justify-between w-full text-base border-t-[1px] border-[#22242725] max-[600px]:flex-col
                 max-[600px]:justify-start max-[600px]:items-start max-[600px]:gap-4">
                     <p>© Vibrant Hub 2025</p>
-                    <p>Todos os direitos reservados</p>
-                    <a href="" className="underline">By: Adrh</a>
+                    <a href="/politicas-de-privacidade" className="underline">Politicas De Privacidade</a>
+                    <a href="https://adrh.space/" target="_blank" className="underline">By: Adrh</a>
                 </div>
             </div>
         </div>

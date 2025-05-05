@@ -42,7 +42,7 @@ export default function Home() {
   });
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <TopSection scrollYProgress={scrollYProgress} />
       <AfterHeroAnimate scrollYProgress={scrollYProgress} />
       <Features />
