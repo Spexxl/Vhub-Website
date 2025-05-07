@@ -7,7 +7,6 @@ import FeaturesBanner01 from "@/app/assets/FeaturesBanner01.png"
 import type { StaticImageData } from "next/image"
 import FeaturesBanner02 from "@/app/assets/FeaturesBanner02.png"
 import FeaturesBanner03 from "@/app/assets/FeaturesBanner03.png"
-import SupportSection from "./Support"
 import Footer from "../Footer"
 
 interface FeatureSectionProps {
@@ -36,7 +35,7 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                 top: 0,
                 zIndex: Number(number) + 10,
             }}
-            className="bg-white flex items-center justify-between h-screen w-full max-[980px]:flex-col"
+            className="bg-[#222427] flex items-center justify-between h-screen w-full max-[980px]:flex-col"
         >
             <div className="h-full w-fit flex flex-col pl-10 py-20 items-start justify-between max-[980px]:h-1/2 max-[980px]:w-full
             max-[980px]:py-5 max-[980px]:px-5 max-[980px]:justify-start max-[980px]:gap-5">
@@ -49,7 +48,7 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                                 duration: 1.3,
                                 ease: [1, 0.20, 0.35, 0.8],
                             }}
-                            className="text-8xl block max-[980px]:text-5xl"
+                            className="text-8xl text-white block max-[980px]:text-5xl"
                         >
                             {number}
                         </motion.span>
@@ -63,7 +62,7 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                                     duration: 1.3,
                                     ease: [1, 0.20, 0.35, 1],
                                 }}
-                                className="text-8xl block max-[1100px]:text-[8vw] max-[980px]:text-5xl"
+                                className="text-8xl text-white block max-[1100px]:text-[8vw] max-[980px]:text-5xl"
                             >
                                 {titlePart1}
                             </motion.h3>
@@ -76,7 +75,7 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                                     duration: 1.3,
                                     ease: [1, 0.20, 0.35, 1],
                                 }}
-                                className="text-8xl block max-[1100px]:text-[8vw] max-[980px]:text-5xl"
+                                className="text-8xl block text-white max-[1100px]:text-[8vw] max-[980px]:text-5xl"
                             >
                                 {titlePart2}
                             </motion.h3>
@@ -84,7 +83,7 @@ function FeatureSection({ number, titlePart1, titlePart2, description, image }: 
                     </div>
                 </div>
                 <div className="max-w-[320px] font-medium text-base text-foreground">
-                    <div className=" overflow-hidden relative flex items-center h-60 max-[980px]:h-fit">
+                    <div className=" overflow-hidden text-white relative flex items-center h-60 max-[980px]:h-fit">
                         {description}
                     </div>
                 </div>
@@ -107,24 +106,23 @@ export default function Features() {
                 number="01-"
                 titlePart1="Progresso"
                 titlePart2="Fácil"
-                description="Veja seus resultados em gráficos, histórico e metas alcançadas. Tudo atualizado automaticamente, sem complicação."
+                description="Veja sua evolução em pesos e medidas corporais e seus resultados em gráficos, histórico e metas alcançadas. Tudo atualizado automaticamente, sem complicação."
                 image={FeaturesBanner01}
             />
             <FeatureSection
                 number="02-"
                 titlePart1="Treino"
                 titlePart2="sob medida"
-                description="Monte e acompanhe treinos personalizados com poucos toques. Mostramos exatamente o que fazer — e como evoluir"
+                description="Monte e acompanhe seus treinos personalizados com poucos toques."
                 image={FeaturesBanner02}
             />
             <FeatureSection
                 number="03-"
                 titlePart1="Controle"
                 titlePart2="de Treino"
-                description="Organize sua rotina com facilidade. O app avisa o que treinar, quando descansar e registra tudo no histórico"
+                description="Organize sua rotina com facilidade. O app avisa o que treinar, auxilia no seu descanso e registra tudo em seu histórico."
                 image={FeaturesBanner03}
             />
-            <SupportSection />
             <Footer
             />
         </div>

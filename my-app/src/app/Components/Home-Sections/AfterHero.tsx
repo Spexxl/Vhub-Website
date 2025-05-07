@@ -97,7 +97,7 @@ export default function AfterHero() {
                         Ver meu progresso todo dia mudou minha vida.
                     </p>
                     <span className="text-base text-white opacity-75 text-end">
-                        — Marina R., 28 anos
+                        - Jamylle P., 32 anos.
                     </span>
                 </div>
             </div>

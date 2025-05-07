@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -7,6 +8,7 @@ html {
 :root {
   --background: #ffffff;
   --foreground: #222427;
+  --font-sans: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
@@ -26,9 +28,8 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
-
 
 @keyframes scrollX {
   0% {
@@ -40,7 +41,7 @@ body {
 }
 
 .animate-scrollX {
-  animation: scrollX 25s linear infinite;
+  animation: scrollX 22s linear infinite;
   white-space: nowrap;
   display: inline-block;
 }
