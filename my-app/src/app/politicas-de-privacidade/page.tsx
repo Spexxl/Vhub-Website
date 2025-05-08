@@ -7,7 +7,7 @@ export default function PoliticasDePrivacidade() {
             <Header />
             <div className="flex flex-col gap-10 items-center justify-center w-full bg-white px-5 py-36">
                 <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">
-                    Política e Privacidade - Vibrant Hub
+                    Política De Privacidade - Vibrant Hub
                 </h1>
                 <div className="text-gray-600 text-lg space-y-6 max-w-4xl">
                     <section>
