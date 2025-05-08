@@ -67,7 +67,7 @@ export default function Header() {
                             delay: 1.4,
                         }}>
                         <button
-                            className="flex items-center justify-center w-10 h-10 rounded-full bg-[#F8DC27] text-black"
+                            className="flex items-center justify-center w-10 h-10 rounded-full bg-[#F8DC27] text-black cursor-pointer"
                             onClick={() => setMenuOpen(!menuOpen)}
                         >
                             {menuOpen ? (
